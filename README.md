@@ -1,6 +1,11 @@
 # Cloudflare DNS Updater
 This image will automatically update your Cloudflare DNS records using their API and whatsmyip's API. It will first determine your IP and compare to Cloudflare then update if necessary. You will have to mount a volume to /ScriptData for the configuration file and log file.
 
+To get your Cloudflare API key and zone, refer to their documentation: 
+
+https://developers.cloudflare.com/fundamentals/api/get-started/create-token/
+
+
 Here is an example docker-compose
 
 ```
@@ -15,3 +20,4 @@ After running for the first time, you will need to:
 1. Edit the cloudflarescript.config file with your API key and zone ID.
 2. Save your changes
 3. Start the container again
+
